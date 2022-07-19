@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block main%}
+<div> <h3 class="ssolink"> Email of who filled the form</h3> </div>
+<form name="form_code" action="/login-verification" action="{{ url_for('login_verification')}}" method="POST" enctype="multipart/form-data">
+    <style> input:focus{
+        background-color: #cae5cb;
+    } </style>
+  <center><input
+  onkeypress="this.style.width = ((this.value.length + 0.5) * 8) + 'px';"
+  class="code-input"
+  id="email"
+  type='text'
+  name='email'
+  minimumInputLength="30"
+  placeholder=""/> </input> </center>
+  <div> <h3 class="ssolink"> Permission number </h3> </div>
+  <center>
+  <input
+  onkeypress="this.style.width = ((this.value.length + 0.5) * 8) + 'px';"
+  class="code-input"
+  id="pm"
+  type='text'
+  name='pm'
+  minimumInputLength="30"
+  placeholder=""/> </input> </center>
+  <center>
+    <div style="padding-top:10%;">
+  <button type="submit" class="ssolink2" value="Submit"> Submit </button>
+  <div>
+  </center>
+  <!-- <label class="inputfile" for="form_code">Submit</label> -->
+  </form>
+{%endblock%}

@@ -1,0 +1,16 @@
+{%extends "base.html"%}
+
+            {%block main%}
+                <div class="field padding-bottom--24">
+                </div>
+                <div class="field">
+                  <a href='{{url_for("verification_client_search")}}' class="ssolink" href="#"> Client Search 
+                </div>
+                <div class="field">
+                  <a href='{{url_for("min_out")}}' class="ssolink" href="#"> Minimum Outstanding Report Generator
+                </div>
+                <div class="field">
+                  <a href='{{url_for("report_generator")}}' class="ssolink" href="#"> Portfolio Report Generator
+                </div>
+              </form>
+              {% endblock %}

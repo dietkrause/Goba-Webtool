@@ -1,0 +1,615 @@
+<html>
+    <head>
+      <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="/static/js/logic.js"></script>
+            <!-- Bootstrap Links -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <!-- JS, Popper.js, and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+        <!-- Jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!--    &lt;!&ndash; for handle Bar &ndash;&gt;-->
+        <script src="https://twitter.github.io/typeahead.js/js/handlebars.js"></script>
+
+        <!--Semantics Ui CDN  -->
+        <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">-->
+        <!--    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>-->
+
+        <!-- select2 -->
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+        <!--Semantics JSS -->
+      <title> Goba Capital </title>
+      <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    </head>
+    
+    <body>
+      <div class="login-root">
+        <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+          <div class="loginbackground box-background--white padding-top--64">
+            <div class="loginbackground-gridContainer">
+              <div class="box-root flex-flex" style="grid-area: top / start / 8 / end;">
+                <div class="box-root" style="background-image: linear-gradient(white 0%, rgb(247, 250, 252) 33%); flex-grow: 1;">
+                </div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 4 / 2 / auto / 5;">
+                <div class="box-root box-divider--light-all-2 animationLeftRight tans3s" style="flex-grow: 1;"></div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 6 / start / auto / 2;">
+                <div class="box-root box-background--blue800" style="flex-grow: 1;"></div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 7 / start / auto / 4;">
+                <div class="box-root box-background--blue animationLeftRight" style="flex-grow: 1;"></div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 8 / 4 / auto / 6;">
+                <div class="box-root box-background--gray100 animationLeftRight tans3s" style="flex-grow: 1;"></div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 2 / 15 / auto / end;">
+                <div class="box-root box-background--cyan200 animationRightLeft tans4s" style="flex-grow: 1;"></div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 3 / 14 / auto / end;">
+                <div class="box-root box-background--blue animationRightLeft" style="flex-grow: 1;"></div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 4 / 17 / auto / 20;">
+                <div class="box-root box-background--gray100 animationRightLeft tans4s" style="flex-grow: 1;"></div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 5 / 14 / auto / 17;">
+                <div class="box-root box-divider--light-all-2 animationRightLeft tans3s" style="flex-grow: 1;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+            <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+              <h1>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                  {% for message in messages %}
+                  <a href="http://gobacapital.com/" rel="dofollow" id="page_title" name={{mail}}> 
+                    {{ message }}
+                  </a>
+                  {% endfor %}
+                {% endif %}
+              {% endwith %}
+            </h1>
+            </div>
+            <div class="formbg-outer">
+                <div class="formbg_table">
+                  <div class="formbg-inner padding-horizontal--48">
+
+<!--   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx START - Structure of the Information page       -->   
+           <div style="align-items:center;padding-left:44%;padding-bottom: 0%;">
+             <img src="static/img/gobalogo.jpeg" alt="" style="width:20%;align-items: center;">
+            </div> 
+            <div style="padding-bottom:0%;padding-top:0%;padding-right:100%">
+              <center> <a href='{{url_for("search_clients")}}' class="ssolink3-b" href="#"> Back </a> </center>
+             </div>
+                            <br>
+                <div style="float:left;margin: 20px;padding-top: 0%;">
+                    <div style="float:left;margin: 20px;">
+                        <h5 class="credit-report"> Location :</h5>
+                    </div>
+                    <div style="float:right;margin: 20px;padding-top: 1.2%;">
+                        <h6 class="credit-report"> 
+                          {% if formated_element["Country"]==""%}
+                            US - Based
+                          {% else %}
+                            {{formated_element["Country"]}}
+                          {% endif%}
+                        </h6> 
+                    </div>
+                </div>
+                {% if formated_element["TAX ID"] %}
+                <div style="float:right;margin: 20px;">
+                    <div style="float:left;margin: 20px;">
+                        <h5 class="credit-report"> TAX ID :</h5>
+                    </div>
+                    <div style="float:right;margin: 20px;padding-top: 1.2%;">
+                        <h6 class="credit-report"> {{formated_element["TAX ID"]}} </h6> 
+                    </div>
+                </div>
+                {%endif%}
+
+                <div style="float:left;margin: 20px;padding-top: 0%;">
+                    <div style="float:left;margin: 20px;">
+                        <h5 class="credit-report"> Nature of the business :</h5>
+                    </div>
+                    <div style="float:right;margin: 20px;padding-top: 1.2%;">
+                        <h6 class="credit-report"> {{formated_element["Nature of the business"]}}  </h6> 
+                    </div>
+                </div>
+
+                <div style="float:left;margin: 20px">
+                    <div style="float:left;margin: 20px;">
+                        <h5 class="credit-report"> City, State :</h5>
+                    </div>
+                    <div style="float:right;margin: 20px;padding-top: 1.2%;">
+                        <h6 class="credit-report"> {{formated_element["City"]}}, {{formated_element["State"]}}</h6> 
+                    </div>
+                </div>
+
+                <div style="float:left;margin: 20px;padding-left: 0%;">
+                    <div style="float:left;margin: 20px;">
+                        <h5 class="credit-report"> Address :</h5>
+                    </div>
+                    <div style="float:right;margin: 20px;padding-top: 1.2%;">
+                        <h6 class="credit-report"> {{formated_element["Address"]}}</h6> 
+                    </div>
+                </div>
+
+                <div style="float:left;margin: 20px;padding-left: 0%;">
+                    <div style="float:left;margin: 20px;">
+                        <h5 class="credit-report"> Zip Code :</h5>
+                    </div>
+                    <div style="float:right;margin: 20px;padding-top: 1.2%;">
+                        <h6 class="credit-report"> {{formated_element["Zip Code"]}}</h6> 
+                    </div>
+                </div>
+                                    <!-- HANDELING THE FILE VALIDATION AND COMMENTS -->
+
+  <form onsubmit="return handleData()" method="post">
+    <style> textarea:focus{
+        background-color: #cae5cb;
+    } 
+    </style>
+                <br>
+              <div style="float:left;margin: 20px;padding-left: 0%;">
+                <div style="float:left;margin: 20px;padding-left: 0%;">
+                  <div style="float:left;margin: 20px;">
+                      <h5 class="credit-report"> Articles of incorporation :</h5>
+
+                      <br>
+                      {% set VAL="B"%}
+                      {% if states[VAL]=="Validated"%}
+                     <h5 style="color:green"> {{states[VAL]}} </h5>
+                     {%elif states[VAL]=="Pending" %}
+                     <h5 style="color:orange"> {{states[VAL]}} </h5>
+                     {% else%}
+                     <h5 style="color:red"> {{states[VAL]}} </h5>
+                     {% endif%}
+
+                  </div>
+                  <div style="float:right;margin: 20px;padding-top: 1.2%;" id="B">
+                      
+                        {% if formated_element["Articles of incorporation"] %}
+                        <h6 class="credit-report"> <a href={{formated_element["Articles of incorporation"]}}> Go to file</a>  </h6> 
+                        {% else %}
+                        <h4 class="credit-report" style="color=red;"> FILE MISSING  </h4> 
+                        {% endif %}
+                      <p ><input type="checkbox" id="validate" name="validate">  <u style="color:#568203 ;font-size: small;"> Validate</u></p>
+                      <p ><input type="checkbox" id="reject" name="reject">  <u style="color: red;font-size: small;"> Reject</u></p>
+                  </div>
+                </div>
+                <div style="float:right;margin: 20px;padding-top: 1.2%;">
+                  <textarea name="paragraph_text" cols="20" rows="5" id="C"> {{comments["C"]}}</textarea>
+                </div>
+              </div>
+              <br>
+              <div style="float:left;margin: 20px;padding-left: 0%;">
+                <div style="float:left;margin: 20px;padding-left: 0%;">
+                  <div style="float:left;margin: 20px;">
+                      <h5 class="credit-report"> Certificate of good standing :</h5>
+
+                      <br>
+                      {% set VAL="D"%}
+                      {% if states[VAL]=="Validated"%}
+                     <h5 style="color:green"> {{states[VAL]}} </h5>
+                     {%elif states[VAL]=="Pending" %}
+                     <h5 style="color:orange"> {{states[VAL]}} </h5>
+                     {% else%}
+                     <h5 style="color:red"> {{states[VAL]}} </h5>
+                     {% endif%}
+                  </div>
+                  <div style="float:right;margin: 20px;padding-top: 1.2%;" id="D">
+                    {% if formated_element["Certificate of good standing"] %}
+                    <h6 class="credit-report"> <a href={{formated_element["Certificate of good standing"]}}> Go to file</a>  </h6> 
+                        {% else %}
+                        <h4 class="credit-report" style="color=red;"> FILE MISSING  </h4> 
+                        {% endif %}
+                      <p ><input type="checkbox" id="validate" name="validate2">  <u style="color:#568203 ;font-size: small;"> Validate</u></p>
+                      <p ><input type="checkbox" id="reject" name="reject2">  <u style="color: red;font-size: small;"> Reject</u></p>
+                  </div>
+                </div>
+                <div style="float:right;margin: 20px;padding-top: 1.2%;">
+                  <textarea name="paragraph_text" cols="25" rows="5" id="E"> {{comments["E"]}}</textarea>
+                </div>
+              </div>
+
+              <br>
+              <div style="float:left;margin: 20px;padding-left: 0%;">
+                <div style="float:left;margin: 20px;padding-left: 0%;">
+                  <div style="float:left;margin: 20px;">
+                      <h5 class="credit-report"> Corporate Presentation :</h5>
+                      <br>
+                      {% set VAL="F"%}
+                      {% if states[VAL]=="Validated"%}
+                     <h5 style="color:green"> {{states[VAL]}} </h5>
+                     {%elif states[VAL]=="Pending" %}
+                     <h5 style="color:orange"> {{states[VAL]}} </h5>
+                     {% else%}
+                     <h5 style="color:red"> {{states[VAL]}} </h5>
+                     {% endif%}
+                  </div>
+                  <div style="float:right;margin: 20px;padding-top: 1.2%;" id="F">
+                    {% if formated_element["Corporate presentation of the company"] %}
+                    <h6 class="credit-report"> <a href={{formated_element["Corporate presentation of the company"]}}> Go to file</a>  </h6> 
+                        {% else %}
+                        <h4 class="credit-report" style="color=red;"> FILE MISSING  </h4> 
+                        {% endif %}
+                      
+                      <p ><input type="checkbox" id="validate" name="validate3">  <u style="color:#568203 ;font-size: small;"> Validate</u></p>
+                      <p ><input type="checkbox" id="reject" name="reject3">  <u style="color: red;font-size: small;"> Reject</u></p>
+                  </div>
+                </div>
+                <div style="float:right;margin: 20px;padding-top: 1.2%;">
+                  <textarea name="paragraph_text" cols="20" rows="5" id="G" > {{comments["G"]}}</textarea>
+                </div>
+              </div>
+
+              <br>
+              <div style="float:left;margin: 20px;padding-left: 0%;">
+                <div style="float:left;margin: 20px;padding-left: 0%;">
+                  <div style="float:left;margin: 20px;">
+                      <h5 class="credit-report"> Business info Excel :</h5>
+                      <br>
+                      {% set VAL="H"%}
+                      {% if states[VAL]=="Validated"%}
+                     <h5 style="color:green"> {{states[VAL]}} </h5>
+                     {%elif states[VAL]=="Pending" %}
+                     <h5 style="color:orange"> {{states[VAL]}} </h5>
+                     {% else%}
+                     <h5 style="color:red"> {{states[VAL]}} </h5>
+                     {% endif%}
+                  </div>
+                  <div style="float:right;margin: 20px;padding-top: 1.2%;" id="H">
+                    {% if formated_element["Excel file with the business information"] %}
+                    <h6 class="credit-report"> <a href={{formated_element["Excel file with the business information"]}}> Go to file</a>  </h6> 
+                        {% else %}
+                        <h4 class="credit-report" style="color=red;"> FILE MISSING  </h4> 
+                        {% endif %}
+                      
+                      <p ><input type="checkbox" id="validate" name="validate4">  <u style="color:#568203 ;font-size: small;"> Validate</u></p>
+                      <p ><input type="checkbox" id="reject" name="reject4">  <u style="color: red;font-size: small;"> Reject</u></p>
+                  </div>
+                </div>
+                <div style="float:right;margin: 20px;padding-top: 1.2%;">
+                  <textarea name="paragraph_text" cols="25" rows="5" id="I"> {{comments["I"]}}</textarea>
+                </div>
+              </div>
+
+              <br>
+              <div style="float:left;margin: 20px;padding-left: 0%;">
+                <div style="float:left;margin: 20px;padding-left: 0%;">
+                  <div style="float:left;margin: 20px;">
+                      <h5 class="credit-report"> 1 year Financial E. :</h5>
+                      <br>
+                      {% set VAL="J"%}
+                      {% if states[VAL]=="Validated"%}
+                     <h5 style="color:green"> {{states[VAL]}} </h5>
+                     {%elif states[VAL]=="Pending" %}
+                     <h5 style="color:orange"> {{states[VAL]}} </h5>
+                     {% else%}
+                     <h5 style="color:red"> {{states[VAL]}} </h5>
+                     {% endif%}
+                  </div>
+                  <div style="float:right;margin: 20px;padding-top: 1.2%;" id="J">
+                    {% if formated_element["Present year financial statements"] %}
+                    <h6 class="credit-report"> <a href={{formated_element["Present year financial statements"]}}> Go to file</a>  </h6>
+                        {% else %}
+                        <h4 class="credit-report" style="color=red;"> FILE MISSING  </h4> 
+                        {% endif %}
+                       
+                      <p ><input type="checkbox" id="validate" name="validate5">  <u style="color:#568203 ;font-size: small;"> Validate</u></p>
+                      <p ><input type="checkbox" id="reject" name="reject5">  <u style="color: red;font-size: small;"> Reject</u></p>
+                  </div>
+                </div>
+                <div style="float:right;margin: 20px;padding-top: 1.2%;">
+                  <textarea name="paragraph_text" cols="25" rows="5" id="K"> {{comments["K"]}}</textarea>
+                </div>
+              </div>
+
+              <br>
+              <div style="float:left;margin: 20px;padding-left: 0%;">
+                <div style="float:left;margin: 20px;padding-left: 0%;">
+                  <div style="float:left;margin: 20px;">
+                      <h5 class="credit-report"> 2 year FE :</h5>
+                      <br>
+                      {% set VAL="L"%}
+                      {% if states[VAL]=="Validated"%}
+                     <h5 style="color:green"> {{states[VAL]}} </h5>
+                     {%elif states[VAL]=="Pending" %}
+                     <h5 style="color:orange"> {{states[VAL]}} </h5>
+                     {% else%}
+                     <h5 style="color:red"> {{states[VAL]}} </h5>
+                     {% endif%}
+                  </div>
+                  <div style="float:right;margin: 20px;padding-top: 1.2%;" id="L">
+                    {% if formated_element["1 year old financial statement"] %}
+                    <h6 class="credit-report"> <a href={{formated_element["1 year old financial statement"]}}> Go to file</a>  </h6> 
+                        {% else %}
+                        <h4 class="credit-report" style="color=red;"> FILE MISSING  </h4> 
+                        {% endif %}
+                     
+                      <p ><input type="checkbox" id="validate" name="validate6">  <u style="color:#568203 ;font-size: small;"> Validate</u></p>
+                      <p ><input type="checkbox" id="reject" name="reject6">  <u style="color: red;font-size: small;"> Reject</u></p>
+                  </div>
+                </div>
+                <div style="float:right;margin: 20px;padding-top: 1.2%;">
+                  <textarea name="paragraph_text" cols="25" rows="5" id="M"> {{comments["M"]}}</textarea>
+                </div>
+              </div>
+
+              <br>
+              <div style="float:left;margin: 20px;padding-left: 0%;">
+                <div style="float:left;margin: 20px;padding-left: 0%;">
+                  <div style="float:left;margin: 20px;">
+                      <h5 class="credit-report"> 3 year FE :</h5>
+                      <br>
+                      {% set VAL="N"%}
+                      {% if states[VAL]=="Validated"%}
+                     <h5 style="color:green"> {{states[VAL]}} </h5>
+                     {%elif states[VAL]=="Pending" %}
+                     <h5 style="color:orange"> {{states[VAL]}} </h5>
+                     {% else%}
+                     <h5 style="color:red"> {{states[VAL]}} </h5>
+                     {% endif%}
+                  </div>
+                  <div style="float:right;margin: 20px;padding-top: 1.2%;" id="N">
+                    {% if formated_element["2 year old financial statement"] %}
+                    <h6 class="credit-report"> <a href={{formated_element["2 year old financial statement"]}}> Go to file</a>  </h6>  
+                        {% else %}
+                        <h4 class="credit-report" style="color=red;"> FILE MISSING  </h4> 
+                        {% endif %}
+                      
+                      <p ><input type="checkbox" id="validate" name="validate7">  <u style="color:#568203 ;font-size: small;"> Validate</u></p>
+                      <p ><input type="checkbox" id="reject" name="reject7">  <u style="color: red;font-size: small;"> Reject</u></p>
+                  </div>
+                </div>
+                <div style="float:right;margin: 20px;padding-top: 1.2%;">
+                  <textarea name="paragraph_text" cols="25" rows="5" id="O"> {{comments["O"]}}</textarea>
+                </div>
+              </div>
+
+              <br>
+              <div style="float:left;margin: 20px;padding-left: 0%;">
+                <div style="float:left;margin: 20px;padding-left: 0%;">
+                  <div style="float:left;margin: 20px;">
+                      <h5 class="credit-report"> Recent interim FE :</h5>
+                      <br>
+                      {% set VAL="P"%}
+                      {% if states[VAL]=="Validated"%}
+                     <h5 style="color:green"> {{states[VAL]}} </h5>
+                     {%elif states[VAL]=="Pending" %}
+                     <h5 style="color:orange"> {{states[VAL]}} </h5>
+                     {% else%}
+                     <h5 style="color:red"> {{states[VAL]}} </h5>
+                     {% endif%}
+                  </div>
+                  <div style="float:right;margin: 20px;padding-top: 1.2%;" id="P">
+                    {% if formated_element["Interim financial statements"] %}
+                    <h6 class="credit-report"> <a href={{formated_element["Interim financial statements"]}}> Go to file</a>  </h6>  
+                        {% else %}
+                        <h4 class="credit-report" style="color=red;"> FILE MISSING  </h4> 
+                        {% endif %}
+                      
+                      <p ><input type="checkbox" id="validate" name="validate8">  <u style="color:#568203 ;font-size: small;"> Validate</u></p>
+                      <p ><input type="checkbox" id="reject" name="reject8">  <u style="color: red;font-size: small;"> Reject</u></p>
+                  </div>
+                </div>
+                <div style="float:right;margin: 20px;padding-top: 1.2%;">
+                  <textarea name="paragraph_text" cols="25" rows="5" id="Q"> {{comments["Q"]}}</textarea>
+                </div>
+              </div>
+
+              <br>
+              <div style="float:left;margin: 20px;padding-left: 0%;">
+                <div style="float:left;margin: 20px;padding-left: 0%;">
+                  <div style="float:left;margin: 20px;">
+                      <h5 class="credit-report"> AR/AP aging report :</h5>
+                      <br>
+                      {% set VAL="R"%}
+                      {% if states[VAL]=="Validated"%}
+                     <h5 style="color:green"> {{states[VAL]}} </h5>
+                     {%elif states[VAL]=="Pending" %}
+                     <h5 style="color:orange"> {{states[VAL]}} </h5>
+                     {% else%}
+                     <h5 style="color:red"> {{states[VAL]}} </h5>
+                     {% endif%}
+                  </div>
+                  <div style="float:right;margin: 20px;padding-top: 1.2%;" id="R">
+                    {% if formated_element["Account receivable/ account payable aging report"] %}
+                    <h6 class="credit-report"> <a href={{formated_element["Account receivable/ account payable aging report"]}}> Go to file</a>  </h6>  
+                        {% else %}
+                        <h4 class="credit-report" style="color=red;"> FILE MISSING  </h4> 
+                        {% endif %}
+                      
+                      <p ><input type="checkbox" id="validate" name="validate9">  <u style="color:#568203 ;font-size: small;"> Validate</u></p>
+                      <p ><input type="checkbox" id="reject" name="reject9">  <u style="color: red;font-size: small;"> Reject</u></p>
+                  </div>
+                </div>
+                <div style="float:right;margin: 20px;padding-top: 1.2%;">
+                  <textarea name="paragraph_text" cols="25" rows="5" id="S"> {{comments["S"]}}</textarea>
+                </div>
+              </div>
+
+              <br>
+              <div style="float:left;margin: 20px;padding-left: 0%;">
+                <div style="float:left;margin: 20px;padding-left: 0%;">
+                  <div style="float:left;margin: 20px;">
+                      <h5 class="credit-report"> Tax Return :</h5>
+                      <br>
+                      {% set VAL="T"%}
+                      {% if states[VAL]=="Validated"%}
+                     <h5 style="color:green"> {{states[VAL]}} </h5>
+                     {%elif states[VAL]=="Pending" %}
+                     <h5 style="color:orange"> {{states[VAL]}} </h5>
+                     {% else%}
+                     <h5 style="color:red"> {{states[VAL]}} </h5>
+                     {% endif%}
+                  </div>
+                  <div style="float:right;margin: 20px;padding-top: 1.2%;" id="T">
+                    {% set value=formated_element["Tax return"]%}
+                          {% if value == empty %}
+                          <h4 class="credit-report" style="color=red;"> FILE MISSING  </h4> 
+                          {% else %}
+                              {% for val in value %}
+                              <h6 class="credit-report">  <a href={{val}}>Go to file ({{loop.index}})</a> <br> </h6> 
+                              {% endfor%}
+                          {%endif%}
+                      <p ><input type="checkbox" id="validate" name="validate10">  <u style="color:#568203 ;font-size: small;"> Validate</u></p>
+                      <p ><input type="checkbox" id="reject" name="reject10">  <u style="color: red;font-size: small;"> Reject</u></p>
+                  </div>
+                </div>
+                <div style="float:right;margin: 20px;padding-top: 1.2%;">
+                  <textarea name="paragraph_text" cols="25" rows="5" id="U"> {{comments["U"]}}</textarea>
+                </div>
+              </div>
+
+              <br>
+              <div style="float:left;margin: 20px;padding-left: 0%;">
+                <div style="float:left;margin: 20px;padding-left: 0%;">
+                  <div style="float:left;margin: 20px;">
+                      <h5 class="credit-report"> Document examples :</h5>
+                      <br>
+                      {% set VAL="V"%}
+                      {% if states[VAL]=="Validated"%}
+                     <h5 style="color:green"> {{states[VAL]}} </h5>
+                     {%elif states[VAL]=="Pending" %}
+                     <h5 style="color:orange"> {{states[VAL]}} </h5>
+                     {% else%}
+                     <h5 style="color:red"> {{states[VAL]}} </h5>
+                     {% endif%}
+                  </div>
+                  <div style="float:right;margin: 20px;padding-top: 1.2%;" id="V">
+                              {% set value=formated_element["Examples of operations the client wants to finance"]%}
+                              {% if value == empty %}
+                              <h4 class="credit-report" style="color=red;"> FILE MISSING  </h4> 
+                              {%else%}
+                              {% for val in value %}
+                              <h6 class="credit-report">  <a href={{val}}>Go to file ({{loop.index}})</a> <br> </h6> 
+                              {% endfor%}
+                              {% endif%}
+                      <p ><input type="checkbox" id="validate" name="validate11">  <u style="color:#568203 ;font-size: small;"> Validate</u></p>
+                      <p ><input type="checkbox" id="reject" name="reject11">  <u style="color: red;font-size: small;"> Reject</u></p>
+                  </div>
+                </div>
+                <div style="float:right;margin: 20px;padding-top: 1.2%;">
+                  <textarea name="paragraph_text" cols="25" rows="5" id="W"> {{comments["W"]}}</textarea>
+                </div>
+              </div>
+
+              <br>
+              <div style="float:left;margin: 20px;padding-left: 0%;">
+                <div style="float:left;margin: 20px;padding-left: 0%;">
+                  <div style="float:left;margin: 20px;">
+                      <h5 class="credit-report"> Beneficial owners IDs :</h5>
+                      <br>
+                      {% set VAL="X"%}
+                      {% if states[VAL]=="Validated"%}
+                     <h5 style="color:green"> {{states[VAL]}} </h5>
+                     {%elif states[VAL]=="Pending" %}
+                     <h5 style="color:orange"> {{states[VAL]}} </h5>
+                     {% else%}
+                     <h5 style="color:red"> {{states[VAL]}} </h5>
+                     {% endif%}
+                  </div>
+                  <div style="float:right;margin: 20px;padding-top: 1.2%;" id="X">
+                    {% set value=formated_element["IDs of the beneficial owners"]%}
+                    {% if value == empty %}
+                    <h4 class="credit-report" style="color=red;"> FILE MISSING  </h4> 
+                    {% else%}
+                              {% for val in value %}
+                              <h6 class="credit-report">  <a href={{val}}>Go to file ({{loop.index}})</a> <br> </h6> 
+                              {% endfor%}
+                    {% endif%}
+                      <p ><input type="checkbox" id="validate" name="validate12">  <u style="color:#568203 ;font-size: small;"> Validate</u></p>
+                      <p ><input type="checkbox" id="reject" name="reject12">  <u style="color: red;font-size: small;"> Reject</u></p>
+                  </div>
+                </div>
+                <div style="float:right;margin: 20px;padding-top: 1.2%;">
+                  <textarea name="paragraph_text" cols="25" rows="5" id="Y"> {{comments["Y"]}}</textarea>
+                </div>
+              </div>
+
+              <br>
+              <div style="float:left;margin: 20px;padding-left: 0%;">
+                <div style="float:left;margin: 20px;padding-left: 0%;">
+                  <div style="float:left;margin: 20px;">
+                      <h5 class="credit-report"> Beneficial owners signs :</h5>
+                      <br>
+                      {% set VAL="Z"%}
+                      {% if states[VAL]=="Validated"%}
+                     <h5 style="color:green"> {{states[VAL]}} </h5>
+                     {%elif states[VAL]=="Pending" %}
+                     <h5 style="color:orange"> {{states[VAL]}} </h5>
+                     {% else%}
+                     <h5 style="color:red"> {{states[VAL]}} </h5>
+                     {% endif%}
+                  </div>
+                  <div style="float:right;margin: 20px;padding-top: 1.2%;" id="Z">
+                    {% set value=formated_element["Signs of the beneficial owners"]%}
+                    {% if value == empty %}
+                    <h4 class="credit-report" style="color=red;"> FILE MISSING  </h4>
+                    {% else %}
+                              {% for val in value %}
+                              <h6 class="credit-report">  <a href={{val}}>Go to file ({{loop.index}})</a> <br> </h6> 
+                              {% endfor%}
+                    {% endif%}
+                      <p ><input type="checkbox" id="validate" name="validate13">  <u style="color:#568203 ;font-size: small;"> Validate</u></p>
+                      <p ><input type="checkbox" id="reject" name="reject13">  <u style="color: red;font-size: small;"> Reject</u></p>
+                  </div>
+                </div>
+                <div style="float:right;margin: 20px;padding-top: 1.2%;">
+                  <textarea name="paragraph_text" cols="25" rows="5" id="AA"> {{comments["AA"]}}</textarea>
+                </div>
+                <div class="update-client"> 
+                  <input class="update-info" type="submit" name="submit" value="Update information" id="Update information"/>  </input>
+                  <label class="inputfile" for="Update information"> Update information</label>
+                 </div>
+                <div class="notify_user">
+                  <p >
+                    <input type="checkbox" id="notify_user" name="notify_user" > 
+                     <u style="color:#568203 ;font-size: small;"> Notify the user about the changes and share the comments with him</u>
+                  </p>
+                </div>
+              </div> 
+             
+  </form>
+
+       
+
+                
+<!--   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx END -Structure of the Information page       -->   
+
+
+
+                    </div>
+                    <img src="https://gobacapital.com/wp-content/uploads/2021/11/CirclesAndArrow.png" alt="" class="logo_table">
+                    <div style="padding-bottom:10%;padding-top:0%">
+                      <center> <a href='{{url_for("display_menu")}}' class="ssolink3-b" href="#"> Menu </a> </center>
+                     </div>
+                </div>  
+                
+                  </div>
+                </div>
+                <div class="footer-link padding-top--24">
+                  <span>How it works ?</span>
+                  <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
+                    <span><a href="#">© K-Finance</a></span>
+                    <span><a href="#">Contact</a></span>
+                    <span><a href="#">Privacy & terms</a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </body>
+      
+      </html> 

@@ -1,0 +1,38 @@
+{%extends "base.html"%}
+
+{% block main%}
+<form id="stripe-login" action="/upload-document" method="POST" enctype="multipart/form-data">
+    <div class="field padding-bottom--24">
+        <p class="ssolink"> 
+            Upload the .xlsx documents in the following format : <br>
+            <br> </p>
+            <h3 class="ssolink">COUNTRY.xlsx </h3>
+            <br>
+           <p class="ssolink">Once you uploaded all the files, download the generated file <br>
+        </p>
+      </div>
+    <center>
+    <div>
+    <div class="field padding-bottom--24">
+    <input type="file" class="inputfile" name="document" id="document">
+    <label class="inputfile" for="document">Select the file</label>
+    <br>
+  </div>
+  </div>
+</center>
+  <div><p class="ssolink">( {% if n_file %}
+    {%if n_file!=0 %} {{n_file - 1}} {%else%} {{n_file}} {% endif%}
+    {% endif %} Files loaded )</p> </div>
+  </div>
+  <div class="field padding-bottom--24">
+    <input type="submit" name="submit" value="Upload Document" name="Upload Document" id="Upload Document" class="update-info">
+   <center> <label class="inputfile" for="Upload Document">Upload the file</label> </center>
+  </div>
+  <div class="field">
+   <center> <a href='{{url_for("download_document")}}' class="ssolink2" href="#"> Download generated document </a> </center>
+  </div>
+  <div>
+
+  </div>
+</form>
+{% endblock%}

@@ -1,0 +1,28 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+pandas = "*"
+openpyxl = "*"
+gspread = "*"
+twilio = "*"
+geocoder = "*"
+python-dotenv = "*"
+google-auth-httplib2 = "*"
+google-auth-oauthlib = "*"
+google-api-python-client = "*"
+uritemplate = "*"
+httplib2 = "*"
+uritemplate-py = "*"
+pillow = "*"
+sendgrid = "*"
+gunicorn = "*"
+gmplot = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

@@ -1,0 +1,60 @@
+{%extends "base.html"%}
+
+{% block main%}
+<form id="stripe-login" action="/upload-document3" method="POST" enctype="multipart/form-data">
+    <div class="field padding-bottom--24">
+        <p class="ssolink"> 
+            <br>
+            <h3 class="ssolink"> PENDING DOCUMENT </h3>
+            <br>
+      </div>
+
+      
+    <div>
+            <center>
+                <div class="col-md-8">
+                    <input  class="prompt" type="text" placeholder="...">
+                </div> 
+            </center>
+
+            <center>
+                <div style="padding-top:5%;padding-bottom:5%;">
+                    <a  onclick="btn_handler_clients()" class="ssolink3" > Select</a> 
+                </div> 
+            </center>
+    </div>
+    {% if selected_pending %}
+    <center> <div><p class="ssolink"> Selected document: {{selected_pending}} </p> </div></center>
+    {% endif %} 
+
+                <script>
+                var content = {{ pending | tojson }};
+                $(".prompt").select2({
+                data:content,
+                // minimumInputLength: 2,
+                width: '100%',
+                multiple:false,
+                placeholder:"Select pending file",
+                // templateResult:formatState
+                });
+                </script>
+    <center>
+    <div>
+    <div class="field padding-bottom--24">
+    <input type="file" class="inputfile" name="document" id="document">
+    <label class="inputfile" for="document">Select the file</label>
+    <br>
+  </div>
+  </div>
+</center>
+  </div>
+  
+  <div class="field padding-bottom--24">
+    <input type="submit" name="submit" value="Upload Document" name="Upload Document" id="Upload Document" class="update-info">
+   <center> <label class="inputfile" for="Upload Document">Upload the file</label> </center>
+  </div>
+  <div>
+
+  </div>
+</form>
+{% endblock%}

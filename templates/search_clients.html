@@ -1,0 +1,202 @@
+
+  
+  <html>
+    <head>
+      <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script type="text/javascript" src="/static/js/logic.js"></script>
+            <!-- Bootstrap Links -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <!-- JS, Popper.js, and jQuery -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+        <!-- Jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!--    &lt;!&ndash; for handle Bar &ndash;&gt;-->
+        <script src="https://twitter.github.io/typeahead.js/js/handlebars.js"></script>
+
+        <!--Semantics Ui CDN  -->
+        <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">-->
+        <!--    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>-->
+
+        <!-- select2 -->
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
+        <!--Semantics JSS -->
+      <title> Goba Capital </title>
+      <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    </head>
+    
+    <body>
+      <div class="login-root">
+        <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+          <div class="loginbackground box-background--white padding-top--64">
+            <div class="loginbackground-gridContainer">
+              <div class="box-root flex-flex" style="grid-area: top / start / 8 / end;">
+                <div class="box-root" style="background-image: linear-gradient(white 0%, rgb(247, 250, 252) 33%); flex-grow: 1;">
+                </div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 4 / 2 / auto / 5;">
+                <div class="box-root box-divider--light-all-2 animationLeftRight tans3s" style="flex-grow: 1;"></div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 6 / start / auto / 2;">
+                <div class="box-root box-background--blue800" style="flex-grow: 1;"></div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 7 / start / auto / 4;">
+                <div class="box-root box-background--blue animationLeftRight" style="flex-grow: 1;"></div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 8 / 4 / auto / 6;">
+                <div class="box-root box-background--gray100 animationLeftRight tans3s" style="flex-grow: 1;"></div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 2 / 15 / auto / end;">
+                <div class="box-root box-background--cyan200 animationRightLeft tans4s" style="flex-grow: 1;"></div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 3 / 14 / auto / end;">
+                <div class="box-root box-background--blue animationRightLeft" style="flex-grow: 1;"></div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 4 / 17 / auto / 20;">
+                <div class="box-root box-background--gray100 animationRightLeft tans4s" style="flex-grow: 1;"></div>
+              </div>
+              <div class="box-root flex-flex" style="grid-area: 5 / 14 / auto / 17;">
+                <div class="box-root box-divider--light-all-2 animationRightLeft tans3s" style="flex-grow: 1;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+            <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+              <h1><a href="http://gobacapital.com/" rel="dofollow"> 
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                  {% for message in messages %}
+                    {{ message }}
+                  {% endfor %}
+                {% endif %}
+              {% endwith %}
+            </a></h1>
+            </div>
+            <div class="formbg-outer">
+                <div class="formbg_table">
+                  <div class="formbg-inner padding-horizontal--48">
+
+                    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+                                <div class="row">
+                                   <div class="col-md-8">
+                                        <input  class="prompt" type="text" placeholder="...">
+                                    </div> 
+                                      <a  onclick="btn_handler()" class="ssolink3" > Apply filter</a>
+                                    </div>
+                                </div>
+                </body>
+                <script>
+                    var content = {{ options | tojson }};
+                    $(".prompt").select2({
+                        data:content,
+                        // minimumInputLength: 2,
+                        width: '100%',
+                        multiple:true,
+                        placeholder:"Select the column you want to include",
+                        // templateResult:formatState
+                    });
+                </script>
+
+                    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+                    <!-- Handeling the selection of the columns and rows that are being used-->
+                    <div id="table-wrapper">
+                        <div id="table-scroll">
+                    <table class="styled-table">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Business name </th>
+                              {% for column in cols_global %}
+                              {% if column %}
+                            <th scope="col">{{column}}</th>
+                            {% endif%}
+                            {% endfor%}
+                          <!--  <th scope="col">Last</th>
+                            <th scope="col">Handle</th> -->
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                        {% set counter=1%}
+                        {% for i in range (0,len_data_list) %}
+                        {% set value = data_list[i][options_keys["Bussines name"][0]] %}
+                        {% if value %}
+                        {% set value=value%}
+                        {% else %}
+                        {% set value = data_list[i][options_keys["Bussines name"][1]] %}
+                        {% endif %}
+                        {% if value%}
+                          <tr>
+                          <th scope="row">{{counter}}</th>
+                          {% set counter=counter+1%}
+                          <th scope="row"> 
+                            
+                              <a  onclick="Redirect(this)" type="button" class="ssolink2" href='{{url_for("look_client_view")}}' value="{{i}}" >{{value}} </a>
+                          </th> 
+                         
+                            {% for column in cols_global%}
+                                {% if column %}
+                                {% set value = data_list[i][options_keys[column][0]] %}
+                                      {% if value%}
+                                      {% set value=value%}
+                                      {% else %}
+                                      {% set value = data_list[i][options_keys[column][1]] %}
+                                      {% endif %}
+                                    {% if column in multiple%}
+                        
+                                        <td> {% for val in value %}
+                                          <a href={{val}}>Go to file ({{loop.index}})</a> <br>
+                                
+                                            {% endfor%}
+                                        </td>
+                                    {% else %}
+                                    <!--ATTEMPT OF MODIFICATION-->
+                                          {% if column in doc_options%}
+                                              <td><a href={{value}}>Go to file</a> </td>
+                                          {% else %}
+                                            <td>{{value}}</td>
+                                          {% endif%}
+                                      
+                                    {%endif%}
+
+                                {%endif%}
+                            {%endfor%}
+                          </tr>
+                        {%endif%}
+                        {%endfor%}
+                        
+                        </tbody>
+                      </table>
+                    </div>
+                 <!---  <div type="container">
+                    <img src="https://gobacapital.com/wp-content/uploads/2021/11/CirclesAndArrow.png" alt="" class="logo_table2">
+                  </div> -->
+                </div>  
+                <div style="padding-bottom:10%;padding-top:0%">
+                  <center> <a href='{{url_for("display_menu")}}' class="ssolink3-b" href="#"> Menu </a> </center>
+                 </div>
+                  </div>
+                </div>
+                <div class="footer-link padding-top--24">
+                  <span>How it works ?</span>
+                  <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
+                    <span><a href="#">© K-Finance</a></span>
+                    <span><a href="#">Contact</a></span>
+                    <span><a href="#">Privacy & terms</a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </body>
+      
+      </html>    
+

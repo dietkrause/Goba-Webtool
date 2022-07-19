@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block main%}
+<!-- <div class="field">
+  <a href='{{url_for("send_push")}}' class="ssolink" href="#"> Send push again
+</div> -->
+{% if push_validated==False %}
+<div> <h3 class="ssolink"> Input the SMS code</h3> </div>
+<style> input:focus{
+  background-color: #cae5cb;
+} </style>
+<form name="form_code" action="/push-verification" action="{{ url_for('push_verification')}}" method="POST" enctype="multipart/form-data">
+ <center>
+  <input
+  class="code-input"
+  id="code"
+  type='text'
+  name='code'
+  size="36"
+  placeholder=""/> </input>
+ </center>
+  <button type="submit" class="code-button">
+  <label class="inputfile" for="code">Submit</label>
+  </button>
+  {% endif %}
+  </form>
+
+{% if push_validated %}
+<div class="field">
+    <a href='{{url_for("search_clients")}}' class="go-to-clients"> Go to clients </a>
+  </div>
+{% endif %}
+
+{% endblock%}

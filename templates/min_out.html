@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block main %}
+<form id="stripe-login" action="/upload-document2" method="POST" enctype="multipart/form-data">
+    <div class="field padding-bottom--15">
+        <p class="ssolink"> 
+            Upload the </p> <h3 class="ssolink">client_ledger.xlsx  </h3> <p class="ssolink"> file
+            <br>
+        </p>
+      </div>
+    <div class="field padding-bottom--5">
+    <input type="file" class="inputfilex" name="document" id="document">
+    <label class="inputfile" for="document">Select the file</label>
+    <br>
+  </div>
+  <div><p class="ssolink">{% if ready %} {{ready}} {% endif %} </p> </div>
+  </div>
+  <div class="field padding-bottom--24">
+    <input type="submit" name="submit" value="Upload Document" id="Upload Document" class="update-info">
+    <center> <label class="inputfile" for="Upload Document">Upload the file</label> </center>
+  </div>
+  <div class="field">
+    <center> <a href='{{url_for("download_document2")}}' class="ssolink2" href="#"> Download generated document  </a> </center>
+  </div>
+  <div>
+
+  </div>
+</form>
+{% endblock %}

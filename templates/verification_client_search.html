@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block main%}
+<div class="button-box">
+<div class="row">
+    <div class="col-md-8">
+       <input  class="prompt" type="text" placeholder="...">
+    </div> 
+    <div class="button-box2">
+     <a  onclick="btn_handler_users()" class="ssolink3-b" > Select User</a>
+    </div>
+</div>
+</div>
+<div>
+  <div><p class="ssolink"> {% if user_selected_to_verify!=[] %} ({{len_users}} Users selected )</p>  <br> 
+    {% if error_code %}
+    <div><center> <p class="error"> {{error_code}}</p> </center> </div>
+    {% if push_attempts%}
+    <div> <center> <p class="error"> {{3 - push_attempts}} Attempts remaining </p> </center> </div>
+    {% endif%}
+    {% endif%}
+     {% for user in user_selected_to_verify%}
+      <p class="ssolink"> {{user}}</p>
+     {% endfor%}
+    {% endif %} </div>
+</div>
+</body>
+<script>
+var content = {{ options | tojson }};
+$(".prompt").select2({
+data:content,
+// minimumInputLength: 2,
+width: '100%',
+multiple:true,
+placeholder:"Select the user(s)",
+// templateResult:formatState
+});
+</script>
+<div class="button-box">
+  <a href='{{url_for("send_push")}}' class="ssolink2" href="#" name="sendpush" id="sendpush"> Send push </a> 
+</div>
+{% if push_validated %}
+<div class="field">
+    <a href='{{url_for("search_clients")}}' class="ssolink" href="#"> Go to clients </a>
+  </div>
+  <br>
+  {% endif%}
+{% endblock%}
